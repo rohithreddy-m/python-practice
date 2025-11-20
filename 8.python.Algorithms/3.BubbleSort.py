@@ -5,6 +5,6 @@ def BS(List):
             if List[j]>List[j+1]:
                 List[j],List[j+1]= List[j+1],List[j]
     return List
-List=[int(i) for i in input("Give the List=").split()]
-Bubble_sort=BS(List)
+Lists=[int(i) for i in input("Give the List=").split()]
+Bubble_sort=BS(Lists)
 print(Bubble_sort)
