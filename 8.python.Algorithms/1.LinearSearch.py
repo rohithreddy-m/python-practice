@@ -1,4 +1,4 @@
-def LS(List,NUmber):
+def LS(List,Number):
     for i in range(len(List)):
         if List[i]==Number:
             return i
