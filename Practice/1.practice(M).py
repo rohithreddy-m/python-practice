@@ -7,7 +7,7 @@ def a(List,Signal):
                 b.append(List[0][i])
             else:
                 b.append(List[1][i])
-            i=i+1
+            i=i+1 
         print(b)
     elif  Signal == 'U' :
         while i<len(List[1]):
