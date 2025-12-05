@@ -28,3 +28,17 @@ for i in range(len(List[0])):
         if l != r:
             b.append(List[i][r])
 print(b)
+
+# size = len(List)-1 
+# mid = size//2
+# res=[]
+# for i in range(len(List[0])):
+#     if i == 0 or i == size:
+#         res.append(List[i][mid])
+#     elif i <= mid:
+#         res.append(List[i][mid-i])
+#         res.append(List[i][mid+i])
+#     else:
+#         res.append(List[i][i-mid])
+#         res.append(List[i][-i+mid-1])
+# print(res)
