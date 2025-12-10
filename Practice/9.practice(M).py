@@ -72,5 +72,5 @@ def pn(number):
         if c:         
             a=a+" "+str(i)
     print(a)
-number=int(input("Give the Number="))
-pn(number)
+# number=int(input("Give the Number="))
+# pn(number)
