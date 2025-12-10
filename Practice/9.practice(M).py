@@ -63,9 +63,10 @@ def a(List,number):
 def pn(number):
     c=True
     a="2"
-    for i in range(3,number,2):
+    for i in range(3,number+1, 2):
         c=True
         for j in range(2,i//2+1):
+            # print(i, j)
             if i%j==0:
                 c=False  
         if c:         
