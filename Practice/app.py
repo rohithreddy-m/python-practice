@@ -1,38 +1,39 @@
-from flask import Flask,jsonify
+from flask import Flask,jsonify,request
 
 app=Flask(__name__)
 
 List=[{"Name":"Rohit","Age":11}]
 
-@app.route("/get",methods=["GET"])
+@app.get("/get")
 def get():
     return jsonify (List)
 
-@app.route("/post",methods=["POST"])
+@app.post("/post")
 def Post():
-    Add={"Name":"Reddy","Age":20}
-    List.append(Add)
+    Data=request.json
+    List.append(Data)
     return jsonify(List)
 
-@app.route("/put",methods=["PUT"])
+@app.put("/put")
 def put():
-    Replace={"Name":"Rohith Reddy","Age":21}
+    Data=request.json
     for i in List:
-        if i["Name"]=="Reddy":
-            List.remove(i)
-            List.append(Replace)
-            return jsonify (List)
+        if i["Name"]== Data["Name"]:
+            i.update(Data)
+    return jsonify (List)
 
-@app.route("/patch",methods=["PATCH"])
+@app.patch("/patch")
 def patch():
+    Data=request.json
     for i in List:
-        if i["Age"]<=11:
+        if i["Age"]<=Data:
             i["Age"]=19
-            return jsonify(List)
-@app.route("/delete",methods=["DELETE"])
+    return jsonify(List)
+@app.delete("/delete")
 def delete():
+    Data=request.json
     for i in List:
-        if i["Age"]==21:
+        if i["Age"]==Data:
             List.remove(i)
-            return jsonify(List)
+    return jsonify(List)
 app.run(debug=True)
