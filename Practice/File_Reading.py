@@ -26,7 +26,6 @@ def post():
         (row["Name"],row["Age"],row["Math"],row["Telugu"]) )
     conn.commit()
     cursor.close() 
-    
     return jsonify({
         "message": "Data inserted successfully",
         "rows_inserted": len(Data)
