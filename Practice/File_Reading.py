@@ -21,7 +21,7 @@ def post():
     Data=pandas.read_excel(file)
     cursor=conn.cursor()
     for _,row in Data.iterrows():
-        cursor.execute(
+        cursor.execute(            
             "INSERT INTO student_data(Name,Age,Math,Telugu) VALUES (%s,%s,%s,%s)",
         (row["Name"],row["Age"],row["Math"],row["Telugu"]) )
     conn.commit()
