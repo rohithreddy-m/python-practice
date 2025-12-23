@@ -32,7 +32,7 @@ def Put_data():
     cursor.execute(""" UPDATE Name
                    SET Name=%(Name)s,
                        age=%(age)s
-                   WHERE Name="rohit reddy"
+                   WHERE id=%(id)s
                    """,Data)
     conn.commit()
     cursor.close()
