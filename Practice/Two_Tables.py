@@ -1,7 +1,7 @@
 from flask import Flask , request , jsonify
 import mysql.connector
 conn=mysql.connector.connect(
-     host="localhost",
+    host="localhost",
     user="root",
     password="root",
     database="student_database"    
